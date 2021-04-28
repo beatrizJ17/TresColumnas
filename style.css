@@ -1,0 +1,49 @@
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+	background-color: white;
+	font-family: 'Lexend Deca';
+	font-size: 22px;
+	font size: 15px;
+
+}
+
+html{
+	height: 100%;
+}
+
+.grid-container {
+	min-height: 100%;
+	display: grid;
+	grid-gap: 10px;
+
+	grid-template: 
+	      "A" auto
+	      "B" auto
+	      "C" auto
+	      "D" auto 
+	      "E" auto;
+}
+/*Para mobile*/
+@media (min-width: 375px) {
+	.grid-container {	    
+        grid-template:
+         "A A" auto
+	     "B B" auto
+	     "D C" auto
+	     "E E" auto / 
+	     65% 35%;      
+	}
+}
+
+@media (min-width: 1440px) {
+     .grid-container {
+        grid-template:
+         "A A A" auto
+	     "B C D" auto
+	     "E E E" auto /
+         15% 55% 30%;
+     }
+}
